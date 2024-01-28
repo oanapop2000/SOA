@@ -1,0 +1,8 @@
+com\activityplanner\calendar\config\OpenAPIDocumentationConfig.class
+com\activityplanner\calendar\model\Event$EventBuilder.class
+com\activityplanner\calendar\repository\EventRepository.class
+com\activityplanner\calendar\service\EventService.class
+com\activityplanner\calendar\controller\EventController.class
+com\activityplanner\calendar\dto\EventRequest.class
+com\activityplanner\calendar\model\Event.class
+com\activityplanner\calendar\CalendarApplication.class

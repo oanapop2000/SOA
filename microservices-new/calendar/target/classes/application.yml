@@ -1,0 +1,15 @@
+server:
+  port: 82
+  servlet:
+    context-path: /activityplanner
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/activityplanner?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: password2000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
