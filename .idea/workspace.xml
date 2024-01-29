@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b19ce0f8-4934-4a78-beaf-9102b9ee9422" name="Changes" comment="" />
+    <list default="true" id="b19ce0f8-4934-4a78-beaf-9102b9ee9422" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/microservices-new/calendar/src/main/java/com/activityplanner/calendar/config/WebClientConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices-new/discovery-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices-new/discovery-server/src/main/java/com/activityplanner/discoveryserver/DiscoveryServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices-new/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/microservices-new/discovery-server/src/test/java/com/activityplanner/discoveryserver/DiscoveryServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/calendar/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/calendar/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/calendar/src/main/java/com/activityplanner/calendar/CalendarApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/calendar/src/main/java/com/activityplanner/calendar/CalendarApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/calendar/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/calendar/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/calendar/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/calendar/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/calendar/target/classes/com/activityplanner/calendar/CalendarApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/calendar/target/classes/com/activityplanner/calendar/CalendarApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/src/main/java/com/activityplanner/user/UserApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/src/main/java/com/activityplanner/user/UserApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/classes/com/activityplanner/user/UserApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/target/classes/com/activityplanner/user/UserApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/microservices-new/user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/surefire-reports/TEST-com.activityplanner.user.UserApplicationTests.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/surefire-reports/com.activityplanner.user.UserApplicationTests.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/test-classes/com/activityplanner/user/UserApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/user-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservices-new/user/target/user-1.0-SNAPSHOT.jar.original" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,15 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Oana Ruxandra Pop/Desktop/SOA2/SOA/microservices-new",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Oana Ruxandra Pop/Desktop/SOA2/SOA/microservices-new&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -33,6 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1706467745931</updated>
       <workItem from="1706467747280" duration="17000" />
+      <workItem from="1706548877613" duration="14000" />
     </task>
     <servers />
   </component>

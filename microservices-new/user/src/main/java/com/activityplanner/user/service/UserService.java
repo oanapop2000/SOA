@@ -23,4 +23,13 @@ public class UserService {
 
         return optionalUser.get();
     }
+
+    public User getUserById(Long id) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isEmpty()) {
+            throw new RuntimeException("User not found!");
+        }
+
+        return optionalUser.get();
+    }
 }

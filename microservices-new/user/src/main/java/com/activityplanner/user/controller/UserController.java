@@ -5,10 +5,7 @@ import com.activityplanner.user.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
@@ -23,7 +20,12 @@ public class UserController {
     }
 
     @GetMapping("/{username}")
-    public ResponseEntity<User> getUser(@PathVariable(value = "username") String username) {
+    public ResponseEntity<User> getUserByUsername(@PathVariable(value = "username") String username) {
         return ResponseEntity.ok(userService.getUserByUsername(username));
+    }
+
+    @GetMapping
+    public User getUserById(@RequestParam Long id) {
+        return userService.getUserById(id);
     }
 }
