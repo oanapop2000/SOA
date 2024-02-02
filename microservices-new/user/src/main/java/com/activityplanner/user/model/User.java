@@ -1,13 +1,14 @@
 package com.activityplanner.user.model;
 
-import com.activityplanner.user.model.enums.UserRole;
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @Entity
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "user")
 public class User {
 
@@ -27,6 +28,4 @@ public class User {
     private String firstName;
 
     private String lastName;
-
-    private UserRole userRole;
 }

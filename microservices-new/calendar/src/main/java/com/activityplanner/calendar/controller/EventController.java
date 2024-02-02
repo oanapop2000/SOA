@@ -6,8 +6,9 @@ import com.activityplanner.calendar.service.EventService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/events")
@@ -25,6 +26,12 @@ public class EventController {
     @ResponseStatus(HttpStatus.OK)
     public Event getEvent(@PathVariable(value = "eventName") String eventName) {
         return eventService.getEventByName(eventName);
+    }
+
+    @GetMapping("userId/{userId}")
+    @ResponseStatus(HttpStatus.OK)
+    public List<Event> getEventsByUserId(@PathVariable(value = "userId") Long userId) {
+        return eventService.getEventByUserId(userId);
     }
 
     @PostMapping

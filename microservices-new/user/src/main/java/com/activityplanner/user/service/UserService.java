@@ -32,4 +32,13 @@ public class UserService {
 
         return optionalUser.get();
     }
+
+    public User getUserByUsernameAndPassword(String username, String password) {
+        Optional<User> optionalUser = userRepository.findByUsernameAndPassword(username, password);
+        if (optionalUser.isEmpty()) {
+            throw new RuntimeException("Username or password invalid!");
+        }
+
+        return optionalUser.get();
+    }
 }

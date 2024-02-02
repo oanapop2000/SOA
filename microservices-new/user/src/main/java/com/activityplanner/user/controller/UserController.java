@@ -4,6 +4,7 @@ import com.activityplanner.user.model.User;
 import com.activityplanner.user.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,5 +28,11 @@ public class UserController {
     @GetMapping
     public User getUserById(@RequestParam Long id) {
         return userService.getUserById(id);
+    }
+
+    @GetMapping("/user")
+    @ResponseStatus(HttpStatus.OK)
+    public User getUserByUsernameAndPassword(@RequestParam String username, @RequestParam String password) {
+        return userService.getUserByUsernameAndPassword(username, password);
     }
 }

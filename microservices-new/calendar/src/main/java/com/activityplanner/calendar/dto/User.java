@@ -1,6 +1,5 @@
 package com.activityplanner.calendar.dto;
 
-import com.activityplanner.calendar.dto.enums.UserRole;
 import lombok.*;
 
 @Data
@@ -20,6 +19,4 @@ public class User {
     private String firstName;
 
     private String lastName;
-
-    private UserRole userRole;
 }
