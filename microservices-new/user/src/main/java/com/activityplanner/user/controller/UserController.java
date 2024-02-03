@@ -35,4 +35,10 @@ public class UserController {
     public User getUserByUsernameAndPassword(@RequestParam String username, @RequestParam String password) {
         return userService.getUserByUsernameAndPassword(username, password);
     }
+
+    @PostMapping
+    public ResponseEntity<String> registerUser(@RequestBody User user) {
+        userService.registerUser(user);
+        return ResponseEntity.ok("User successfully registered");
+    }
 }

@@ -1,7 +1,7 @@
 server:
-  port: 80
+  port: 0
   servlet:
-    context-path: /activityplanner
+    context-path: /user
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/activityplanner?useSSL=false&allowPublicKeyRetrieval=true
