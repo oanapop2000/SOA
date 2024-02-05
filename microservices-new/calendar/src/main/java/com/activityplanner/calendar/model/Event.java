@@ -3,7 +3,7 @@ package com.activityplanner.calendar.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.time.ZonedDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -27,12 +27,10 @@ public class Event {
     private String eventDescription;
 
     @Column(nullable = false)
-    private ZonedDateTime startDate;
+    private Date startDate;
 
     @Column(nullable = false)
-    private ZonedDateTime endDate;
+    private Date endDate;
 
     private String location;
-
-//    private List<User> sharedWith;
 }

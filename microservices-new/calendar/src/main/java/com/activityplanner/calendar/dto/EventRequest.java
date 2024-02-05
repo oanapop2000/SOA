@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.ZonedDateTime;
+import java.util.Date;
 
 @Data
 public class EventRequest {
@@ -16,9 +16,9 @@ public class EventRequest {
 
     private String eventDescription;
 
-    private ZonedDateTime startDate;
+    private Date startDate;
 
-    private ZonedDateTime endDate;
+    private Date endDate;
 
     private String location;
 }

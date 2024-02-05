@@ -30,15 +30,9 @@ public class UserController {
         return userService.getUserById(id);
     }
 
-    @GetMapping("/user")
+    @PostMapping("/user")
     @ResponseStatus(HttpStatus.OK)
-    public User getUserByUsernameAndPassword(@RequestParam String username, @RequestParam String password) {
-        return userService.getUserByUsernameAndPassword(username, password);
-    }
-
-    @PostMapping
-    public ResponseEntity<String> registerUser(@RequestBody User user) {
-        userService.registerUser(user);
-        return ResponseEntity.ok("User successfully registered");
+    public User getUserByUsernameAndPassword(@RequestBody User user) {
+        return userService.getUserByUsernameAndPassword(user.getUsername(), user.getPassword());
     }
 }

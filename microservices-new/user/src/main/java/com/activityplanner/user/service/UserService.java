@@ -41,8 +41,4 @@ public class UserService {
 
         return optionalUser.get();
     }
-
-    public void registerUser(User user) {
-        userRepository.save(user);
-    }
 }

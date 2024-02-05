@@ -53,7 +53,7 @@ public class EventService {
 
         // Call user and check if there is a user with eventRequest's userId
         User user = webClientBuilder.build().get()
-                .uri("http://user/activityplanner/users",
+                .uri("http://user/user/users",
                         uriBuilder -> uriBuilder.queryParam("id", event.getUserId()).build())
                 .retrieve()
                 .bodyToMono(User.class)
@@ -67,5 +67,16 @@ public class EventService {
 
 
         log.info("Event {} is saved", event.getId());
+    }
+
+    public void deleteEvent(Long id){
+        Optional<Event> event = eventRepository.findById(id);
+        if (event.isEmpty()) {
+            throw new RuntimeException("Event not found!");
+        }
+
+        eventRepository.delete(event.get());
+
+        log.info("Event {} is deleted", event.get().getId());
     }
 }
