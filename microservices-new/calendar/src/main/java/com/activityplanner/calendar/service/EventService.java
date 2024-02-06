@@ -28,7 +28,7 @@ public class EventService {
         if (optionalEvent.isEmpty()) {
             throw new RuntimeException("Event not found!");
         }
-
+        log.info("Event {} is found", optionalEvent.get().getId());
         return optionalEvent.get();
     }
 
@@ -37,7 +37,7 @@ public class EventService {
         if (events.isEmpty()) {
             throw new RuntimeException("Event not found!");
         }
-
+        log.info("Events are found");
         return events;
     }
 

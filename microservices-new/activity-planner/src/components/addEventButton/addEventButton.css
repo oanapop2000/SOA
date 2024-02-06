@@ -1,0 +1,29 @@
+.button{
+    transform: scale(1.8);
+}
+
+  
+.add-event-modal {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2vh;
+    box-shadow: 0 2vh 4vh rgba(0, 0, 0, 0.1);
+    width: 20%; /* Adjust the default width for larger screens */
+    height: auto; /* Auto height to accommodate content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; /* Center the card on the page */
+  }
+  
+  .add-event-modal > div {
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+  }
+  
+  .register-button {
+    margin-top: 2.5em;
+    margin-bottom: 0.5em;
+  }

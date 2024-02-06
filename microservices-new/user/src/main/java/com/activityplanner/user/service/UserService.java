@@ -2,11 +2,13 @@ package com.activityplanner.user.service;
 
 import com.activityplanner.user.model.User;
 import com.activityplanner.user.repository.UserRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class UserService {
 
     private final UserRepository userRepository;
@@ -20,7 +22,7 @@ public class UserService {
         if (optionalUser.isEmpty()) {
             throw new RuntimeException("User not found!");
         }
-
+        log.info("User {} is found", optionalUser.get().getId());
         return optionalUser.get();
     }
 
@@ -29,7 +31,7 @@ public class UserService {
         if (optionalUser.isEmpty()) {
             throw new RuntimeException("User not found!");
         }
-
+        log.info("User {} is found", optionalUser.get().getId());
         return optionalUser.get();
     }
 
@@ -38,7 +40,7 @@ public class UserService {
         if (optionalUser.isEmpty()) {
             throw new RuntimeException("Username or password invalid!");
         }
-
+        log.info("User {} is found", optionalUser.get().getId());
         return optionalUser.get();
     }
 }
