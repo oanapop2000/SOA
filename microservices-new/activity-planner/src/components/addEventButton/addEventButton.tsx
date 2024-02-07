@@ -66,9 +66,9 @@ export default function AddEventButton() {
       >
         <Box sx={{ ...style, width: 400 }}>
           <div>
-            <div>
+            <div className="add-event-modal">
               <TextField
-               className="add-event-modal"
+                
                 id="outlined-basic"
                 label="Name"
                 variant="outlined"
@@ -107,8 +107,8 @@ export default function AddEventButton() {
                 onChange={e => setEndDate(e.target.value)}
               />
             </div>
-            <div>
-              <Button onClick={addEvent} variant="contained" color='primary'>
+            <div className='register-button'>
+              <Button onClick={addEvent}  variant="contained" color='primary'>
                 Create event
               </Button>
             </div>

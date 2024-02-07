@@ -1,16 +1,14 @@
 package com.activityplanner.calendar.model;
 
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
 
 @Getter
 @Setter
 @Entity
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 @Table(name = "event")
 public class Event {
 
@@ -24,6 +22,7 @@ public class Event {
     @Column(nullable = false)
     private String eventName;
 
+    @Column(name = "description")
     private String eventDescription;
 
     @Column(nullable = false)
@@ -32,5 +31,6 @@ public class Event {
     @Column(nullable = false)
     private Date endDate;
 
+    @Column
     private String location;
 }
