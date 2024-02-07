@@ -19,14 +19,14 @@ public class AuthorizationService {
     private final AuthorizationRepository authorizationRepository;
     private final UserFeignClient userFeignClient;
 
-    public UserDTO login(String username, String password) {
-        Optional<User> optionalUser = userFeignClient.findByUsernameAndPassword(username, password);
-        if (optionalUser.isEmpty()) {
-            throw new RuntimeException("Username or password invalid!");
-        }
-        log.info("User {} is found", optionalUser.get().getId());
-        return optionalUser.get();
-    }
+//    public UserDTO login(String username, String password) {
+//        Optional<User> optionalUser = userFeignClient.findByUsernameAndPassword(username, password);
+//        if (optionalUser.isEmpty()) {
+//            throw new RuntimeException("Username or password invalid!");
+//        }
+//        log.info("User {} is found", optionalUser.get().getId());
+//        return optionalUser.get();
+//    }
 
     public UserDTO registerUser(User user) {
         ResponseEntity<UserDTO> response = userFeignClient.createUser(user);
@@ -37,7 +37,7 @@ public class AuthorizationService {
         return response.getBody();
     }
 
-    public UserDTO login(String username, String password) {
-        UserDTO
-    }
+//    public UserDTO login(String username, String password) {
+//        UserDTO
+//    }
 }

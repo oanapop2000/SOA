@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -35,7 +36,7 @@ public class EventService {
     public List<Event> getEventByUserId(Long userId) {
         List<Event> events = eventRepository.findByUserId(userId);
         if (events.isEmpty()) {
-            throw new RuntimeException("Event not found!");
+            return new ArrayList<Event>();
         }
         log.info("Events are found");
         return events;

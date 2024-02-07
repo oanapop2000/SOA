@@ -16,7 +16,7 @@ export function RegisterCard() {
 
   const register = async () => {
     try {
-      const response = await axios.post("http://localhost:80/user/register", {
+      const response = await axios.post("http://localhost:80/user/users/register", {
         lastName: lastName,
         email: email,
         firstName: firstName,

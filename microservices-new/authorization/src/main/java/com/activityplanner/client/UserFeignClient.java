@@ -13,6 +13,6 @@ public interface UserFeignClient {
     @PostMapping("/register")
     ResponseEntity<UserDTO> createUser(@RequestBody User user);
 
-    @PostMapping("/login")
-    ResponseEntity
+//    @PostMapping("/login")
+//    ResponseEntity
 }

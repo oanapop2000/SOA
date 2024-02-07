@@ -1,7 +1,5 @@
 package com.activityplanner.user.service;
 
-import com.activityplanner.user.dto.UserDTO;
-import com.activityplanner.user.mapper.UserMapper;
 import com.activityplanner.user.model.User;
 import com.activityplanner.user.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -15,40 +13,37 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-    private final UserMapper userMapper;
 
-    public UserDTO getUserByUsername(String username) {
+    public User getUserByUsername(String username) {
         Optional<User> optionalUser = userRepository.findByUsername(username);
         if (optionalUser.isEmpty()) {
             throw new RuntimeException("User not found!");
         }
-        UserDTO response = userMapper.convertToDTO(optionalUser.get());
-        log.info("User {} is found", response.getId());
-        return response;
+        log.info("User {} is found", optionalUser.get().getId());
+        return optionalUser.get();
     }
 
-    public UserDTO getUserById(Long id) {
+    public User getUserById(Long id) {
         Optional<User> optionalUser = userRepository.findById(id);
         if (optionalUser.isEmpty()) {
             throw new RuntimeException("User not found!");
         }
-        UserDTO response = userMapper.convertToDTO(optionalUser.get());
-        log.info("User {} is found", response.getId());
-        return response;
+        log.info("User {} is found", optionalUser.get().getId());
+        return optionalUser.get();
     }
 
-    public UserDTO getUserByUsernameAndPassword(String username, String password) {
+    public User getUserByUsernameAndPassword(String username, String password) {
         Optional<User> optionalUser = userRepository.findByUsernameAndPassword(username, password);
         if (optionalUser.isEmpty()) {
             throw new RuntimeException("Username or password invalid!");
         }
-        UserDTO response = userMapper.convertToDTO(optionalUser.get());
-        log.info("User {} is found", response.getId());
-        return response;
+        log.info("User {} is found", optionalUser.get().getId());
+        return optionalUser.get();
     }
 
-    public UserDTO createUser(User user) {
+    public User createUser(User user) {
         User savedUser = userRepository.save(user);
-        return userMapper.convertToDTO(savedUser);
+        log.info("User {} is saved", savedUser.getId());
+        return savedUser;
     }
 }
